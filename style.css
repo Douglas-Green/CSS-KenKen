@@ -1,27 +1,52 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0; /* Change this to the color you want */
+  background-color: #333;
+}
+
+#title {
+  font-size: 70px;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .grid {
+  width: 80vmin;
+  height: 80vmin;
   display: grid;
-  height: 500px;
-  border: 0.5rem solid black;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  border: 0.5rem solid black;
 }
 
 .grid-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  border: 0.1rem solid gray;
+  border: 0.2rem solid black;
   font-size: 2rem;
-  background-color: white;
+  background-color: lightblue;
+  color: lightblue; /* white text for contrast */
 }
 
 #box3,
@@ -46,7 +71,15 @@ body {
 }
 
 .prompt {
-  position: relative;
-  top: 0%;
-  left: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px; /* Adjust as needed */
+  color: #000; /* black text for contrast */
+}
+
+.answer {
+  width: 50%;
+  height: 50%;
+  text-align: center;
 }
